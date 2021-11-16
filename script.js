@@ -36,15 +36,19 @@ function createBox(size, gridRow){
 function chooseColorScheme(){
     let rainbowBtn = document.getElementById('rainbowButton')
     let blackBtn = document.getElementById('blackButton')
+    let eraseBtn = document.getElementById('eraseButton')
 
     rainbowBtn.addEventListener('click', function (e) {
         colorWhenMousingOver('rainbow')
     })
-    
+
     blackBtn.addEventListener('click', function (e) {
         colorWhenMousingOver('black')
     })
 
+    eraseBtn.addEventListener('click', function (e) {
+        colorWhenMousingOver('erase')
+    })
 }
 
 function colorWhenMousingOver(scheme){
@@ -56,7 +60,16 @@ function colorWhenMousingOver(scheme){
             }
         })
     }
-    else {
+
+    else if(scheme==='erase'){
+        grid.addEventListener('mouseover', event => {
+            if(event.target.classList[0] === 'gridBox'){
+                event.target.style.backgroundColor = 'bisque';
+            }
+        })
+    }
+
+    else{
         grid.addEventListener('mouseover', event => {
             if(event.target.classList[0] === 'gridBox'){
                 event.target.style.backgroundColor = 'black';
