@@ -4,6 +4,8 @@ This project is an implementation of a 16x16 Etch-a-Sketch. The outline for the 
 
 # Current Version
 
+![A prototype](img/prototype.png)
+
 The current version of the project is a basic webpage with a 16x16 grid. Mousing over the grid will shade in the boxes. Refreshing the webpage will reset the boxes.
 
 Functionality is being implemented to:
