@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: bisque;
+}
+
+#grid {
+    border:3px solid black;
+    display:flex;
+    flex-direction: column;
+    width:300px;
+    height:300px;
+}
+
+.gridRow {
+    flex:1;
+    display:flex;
+    justify-content: space-between;
+}
+
+.gridBox {
+    flex:1;
+}
