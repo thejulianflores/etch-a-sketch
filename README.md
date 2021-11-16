@@ -10,12 +10,15 @@ A demo of the current project can be found [here.](https://thejulianflores.githu
 
 The current version of the project is a basic webpage with a 16x16 grid. Mousing over the grid will shade in the boxes. Refreshing the webpage will reset the boxes.
 
+### FEATURES
+
+1. Reset button that empties the grid
+2. Black or Rainbow pen option
+
 Functionality is being implemented to:
 
-1. Erase without refreshing the webpage
-2. Choose the color of the brush
-3. Choose to "color by hover" or "color by click"
-4. Create a grid of a different size
+1. Choose to "color by hover" or "color by click"
+2. Create a grid of a different size
 
 # Part 1: Understanding the Project
 
