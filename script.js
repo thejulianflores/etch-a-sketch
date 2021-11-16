@@ -6,6 +6,7 @@ function createGrid(size){
         createRow(size);
     }
 
+    chooseColorScheme();
     colorWhenMousingOver();
     resetGridOnPress(grid);
 }
@@ -32,12 +33,41 @@ function createBox(size, gridRow){
     
 }
 
-function colorWhenMousingOver(){
-    grid.addEventListener('mouseover', event => {
-        if(event.target.classList[0] === 'gridBox'){
-            event.target.style.backgroundColor = 'black';
-        }
+function chooseColorScheme(){
+    let rainbowBtn = document.getElementById('rainbowButton')
+    let blackBtn = document.getElementById('blackButton')
+
+    rainbowBtn.addEventListener('click', function (e) {
+        colorWhenMousingOver('rainbow')
     })
+    
+    blackBtn.addEventListener('click', function (e) {
+        colorWhenMousingOver('black')
+    })
+
+}
+
+function colorWhenMousingOver(scheme){
+
+    if(scheme==='rainbow'){
+        grid.addEventListener('mouseover', event => {
+            if(event.target.classList[0] === 'gridBox'){
+                event.target.style.backgroundColor = chooseRandomColor();
+            }
+        })
+    }
+    else {
+        grid.addEventListener('mouseover', event => {
+            if(event.target.classList[0] === 'gridBox'){
+                event.target.style.backgroundColor = 'black';
+            }
+        })
+    }
+}
+
+function chooseRandomColor(){
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return("#"+randomColor)
 }
 
 function resetGridOnPress(grid){
