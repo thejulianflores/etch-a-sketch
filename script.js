@@ -1,22 +1,35 @@
 function createGrid(size){
+
     let grid = document.getElementById('grid');
     
     for( let i = 0; i < size; i++ ){
-        
-        let gridRow = document.createElement('div')
-        gridRow.classList.add('gridRow')
-
-        grid.appendChild(gridRow)
-        for( let j = 0; j < size; j++ ){
-            let gridBox = document.createElement('div')
-            gridBox.classList.add('gridBox')
-
-            gridRow.appendChild(gridBox)
-        }
-
+        createRow(size);
     }
 
     colorWhenMousingOver();
+    resetGridOnPress(grid);
+}
+
+function createRow(size){
+        
+    let gridRow = document.createElement('div')
+    gridRow.classList.add('gridRow')
+
+    grid.appendChild(gridRow)
+
+    for( let j = 0; j < size; j++ ){
+        createBox(size, gridRow);
+    }
+    
+}
+
+function createBox(size, gridRow){
+    
+    let gridBox = document.createElement('div')
+    gridBox.classList.add('gridBox')
+
+    gridRow.appendChild(gridBox)
+    
 }
 
 function colorWhenMousingOver(){
@@ -25,6 +38,20 @@ function colorWhenMousingOver(){
             event.target.style.backgroundColor = 'black';
         }
     })
+}
+
+function resetGridOnPress(grid){
+    let resetButton = document.getElementById('resetButton');
+    resetButton.addEventListener('click', function (e) {
+        eraseGrid(grid)
+        createGrid(16);
+    })
+}
+
+function eraseGrid(grid){
+    while(grid.firstChild){
+        grid.removeChild(grid.firstChild)
+    }
 }
 
 createGrid(16);
