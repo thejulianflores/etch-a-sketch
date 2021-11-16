@@ -6,7 +6,7 @@ This project is an implementation of a 16x16 Etch-a-Sketch. The outline for the 
 
 A demo of the current project can be found [here.](https://thejulianflores.github.io/etch-a-sketch/)
 
-![A prototype](img/prototype.png)
+![A prototype](img/prototype2.png)
 
 The current version of the project is a basic webpage with a 16x16 grid. Mousing over the grid will shade in the boxes. Refreshing the webpage will reset the boxes.
 
