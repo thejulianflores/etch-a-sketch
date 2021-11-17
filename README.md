@@ -6,9 +6,22 @@ This project is an implementation of a 16x16 Etch-a-Sketch. The outline for the 
 
 A demo of the current project can be found [here.](https://thejulianflores.github.io/etch-a-sketch/)
 
-![A prototype](img/prototype2.png)
+![A prototype](img/prototype3.png)
 
-The current version of the project is a basic webpage with a 16x16 grid. Mousing over the grid will shade in the boxes. Refreshing the webpage will reset the boxes.
+The current version of the project is a basic webpage with a 16x16 grid. The user must first choose a drawing option:
+
+1. Hover to draw
+2. Click to draw
+
+The user must then choose a color option:
+
+1. Black Brush
+2. Rainbow Brush
+3. Eraser Brush
+
+The user can reset the grid to the default size with the "Reset" button.
+
+The user can also create a grid of a custom size with the "New Grid" button.
 
 ### FEATURES
 
