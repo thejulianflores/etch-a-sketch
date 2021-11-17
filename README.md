@@ -14,11 +14,12 @@ The current version of the project is a basic webpage with a 16x16 grid. Mousing
 
 1. Reset button that empties the grid
 2. Black or Rainbow pen option
+3. Choose to "color by hover" or "color by click" 
+4. Create a grid of a different size
 
 Functionality is being implemented to:
 
-1. Choose to "color by hover" or "color by click"
-2. Create a grid of a different size
+1. Stylize the page
 
 # Part 1: Understanding the Project
 
@@ -28,3 +29,8 @@ A button will be on the site that will allow the user to clear the current grid 
 
 The grid will allow a maximum width of 100.
 
+# Part 2: Takeaways for Future Projects
+
+One of the issues faced was that upon resetting the grid more than 5 times, the page began to slow down significantly. After debugging, the issue was that the event listeners were being created every time the user created a new grid and none were being removed. 
+
+This issue has since been fixed. When the user erases a grid, the old event listeners are removed with it.

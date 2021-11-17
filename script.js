@@ -7,6 +7,7 @@ function createGrid(size){
     }
 
     chooseColorstyle();
+    makeNewGridOnPress(grid);
     resetGridOnPress(grid);
 }
 
@@ -143,6 +144,19 @@ function chooseRandomColor(){
     return("#"+randomColor)
 }
 
+function makeNewGridOnPress(grid){
+    let newGridButton = document.getElementById('gridButton');
+    newGridButton.addEventListener('click', function (e) {
+        eraseGrid(grid);
+        getGridSize(grid)
+    })
+}
+
+function getGridSize(grid){
+    let gridSize = parseInt(prompt('Length of new grid'))
+    createGrid(gridSize)
+}
+
 function resetGridOnPress(grid){
     let resetButton = document.getElementById('resetButton');
     resetButton.addEventListener('click', function (e) {
@@ -159,8 +173,16 @@ function eraseGrid(grid){
         boxElements[0].parentNode.removeChild(boxElements[0])
     }
 
+    const elements = document.getElementsByTagName('button');
+    for( let i =0; i < elements.length; i++){
+        removeEventListener(elements[i])
+    }
+
+
     text.innerHTML = ""
 }
+
+
 
 createGrid(16);
 
