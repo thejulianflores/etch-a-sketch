@@ -40,22 +40,37 @@ function chooseColorScheme(drawStyle){
     let text = document.getElementById('text')
 
     rainbowBtn.addEventListener('click', function (e) {
+        blackBtn.classList.remove('chosen-button')
+        eraseBtn.classList.remove('chosen-button')
+        rainbowBtn.classList.remove('chosen-button')
+        rainbowBtn.classList.add('chosen-button')
         text.innerHTML = 'Rainbow Brush!'
         colorWhenMousingOver('rainbow', drawStyle)
     })
 
     blackBtn.addEventListener('click', function (e) {
+        blackBtn.classList.remove('chosen-button')
+        eraseBtn.classList.remove('chosen-button')
+        rainbowBtn.classList.remove('chosen-button')
+        blackBtn.classList.add('chosen-button')
         text.innerHTML = 'Black Brush!'
         colorWhenMousingOver('black', drawStyle)
     })
 
     eraseBtn.addEventListener('click', function (e) {
+        blackBtn.classList.remove('chosen-button')
+        eraseBtn.classList.remove('chosen-button')
+        rainbowBtn.classList.remove('chosen-button')
+        eraseBtn.classList.add('chosen-button')
         text.innerHTML = 'We all make mistakes :)'
         colorWhenMousingOver('erase', drawStyle)
     })
 }
 
 function chooseColorstyle() {
+    let rainbowBtn = document.getElementById('rainbowButton')
+    let blackBtn = document.getElementById('blackButton')
+    let eraseBtn = document.getElementById('eraseButton')
     let hoverBtn = document.getElementById('drawHover')
     let clickBtn = document.getElementById('drawClick')
     let textBox = document.getElementById('text')
@@ -63,12 +78,22 @@ function chooseColorstyle() {
 
     hoverBtn.addEventListener('click', function (e){
         removeEventListener(grid)
+        blackBtn.classList.remove('chosen-button')
+        eraseBtn.classList.remove('chosen-button')
+        rainbowBtn.classList.remove('chosen-button')
+        clickBtn.classList.remove('chosen-button')
+        hoverBtn.classList.add('chosen-button')
         textBox.innerHTML = 'Choose a color!'
         chooseColorScheme('hover');
     })
 
     clickBtn.addEventListener('click', function (e) {
         removeEventListener(grid)
+        blackBtn.classList.remove('chosen-button')
+        eraseBtn.classList.remove('chosen-button')
+        rainbowBtn.classList.remove('chosen-button')
+        hoverBtn.classList.remove('chosen-button')
+        clickBtn.classList.add('chosen-button')
         textBox.innerHTML = 'Choose a color!'
         chooseColorScheme('click');
     })
