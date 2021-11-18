@@ -6,7 +6,7 @@ This project is an implementation of a 16x16 Etch-a-Sketch. The outline for the 
 
 A demo of the current project can be found [here.](https://thejulianflores.github.io/etch-a-sketch/)
 
-![A prototype](img/prototype3.png)
+![A prototype](img/prototype4.png)
 
 The current version of the project is a basic webpage with a 16x16 grid. The user must first choose a drawing option:
 
@@ -29,10 +29,6 @@ The user can also create a grid of a custom size with the "New Grid" button.
 2. Black or Rainbow pen option
 3. Choose to "color by hover" or "color by click" 
 4. Create a grid of a different size
-
-Functionality is being implemented to:
-
-1. Stylize the page
 
 # Part 1: Understanding the Project
 
