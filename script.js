@@ -178,7 +178,13 @@ function makeNewGridOnPress(grid){
 }
 
 function getGridSize(grid){
-    let gridSize = parseInt(prompt('Length of new grid'))
+    let gridSize = 0
+    while(gridSize <= 0 || gridSize > 100 || isNaN(gridSize)){
+        gridPrompt = prompt('Choose a new length from 1 to 100')
+        gridSize = parseInt(gridPrompt)
+        console.log((gridSize))
+
+    }
     createGrid(gridSize)
 }
 
